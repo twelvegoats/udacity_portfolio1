@@ -1,0 +1,16 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+#main {
+    @include flex-center;
+
+    img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+}
+
