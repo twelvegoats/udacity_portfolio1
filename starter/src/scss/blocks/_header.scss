@@ -16,7 +16,10 @@
     height: $header-height;
     font-family: $header-font;
     color: $reddish-orange;
-    position: fixed;    
+    position: fixed;  
+    top: 0;
+    left: 0;
+    z-index: 1000;  
     width: 100%;
 
     ul {
@@ -45,8 +48,8 @@
         text-transform: uppercase;
         margin: 0;
         transition: transform 0.3s ease-in-out;
+        will-change: transform;
         cursor: pointer;
-        
     }
 
     & h2:hover {
@@ -54,3 +57,28 @@
         animation: shake 0.5s;
     }
 }
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: $reddish-orange;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+}
+
+@include header-mobile-menu;
