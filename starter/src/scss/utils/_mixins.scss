@@ -1,3 +1,5 @@
+@use "../utils/variables" as *;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -8,4 +10,91 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@mixin bio-media {
+  @media (max-width: 768px) {
+    .header h2 {
+      transition: transform 0.3s ease-in-out;
+      will-change: transform;
+      cursor: pointer;
+    }
+    .header h2:hover {
+      transform: scale($scale-factor);
+      animation: shake 0.5s;
+    }
+    .bio {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      background-size: contain;
+      padding: 0;
+      
+      & .avatar {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 3.5rem;
+      }
+
+      & .intro {
+        width: 30vw;
+        height: auto;
+      }
+    }
+  }
+}
+
+@mixin bio-avatar {
+  @media (max-width: 900px) {
+    .bio {
+      flex-direction: row;
+      text-align: center;
+      gap: 1rem;
+      background-size: contain;
+      padding: 0;
+      gap: 6rem;
+    }
+    .bio .avatar {
+      width: 30vw;
+      height: 30vw;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .bio .intro {
+      width: 40vw;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: cover;
+      padding-top: 1rem;
+    }
+  }
+}
+
+@mixin header-mobile-menu {
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background: $header-color;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+    }
+    .nav-toggle:checked + .hamburger + .nav-menu {
+      display: flex;
+    }
+    .header nav ul {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      padding: 2rem 0;
+    }
+  }
 }
