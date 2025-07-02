@@ -3,18 +3,30 @@
 
 <head>
   <title>Portfolio</title>
-  <link rel="stylesheet" href="../dist/main.css">
+
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../dist/main.css">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="./dist/main.css">
 </head>
 
 <body id="body">
   <header class="header">
     <h2>Logo</h2>
-    <nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav-menu">
       <ul>
         <li>Skills</li>
         <li>Projects</li>
@@ -24,12 +36,15 @@
     </nav>
   </header>
   <main id="main">
-    <img src="./img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg" alt="Glasses lie on a laptop reflecting light from screen">
+   
     <section id="bio" class="bio">
       <section class="headshot">
-        
+        <img src="./img/Avatar 02.jpeg" alt="Image of a man in a postapocalyptic background wearing a black shirt and glasses" class="avatar">
       </section>
-      <section class="intro"></section>
+      <section class="intro">
+        <h1>Hello, I'm Sean</h1>
+        <p>I'm a passionate web developer with a knack for creating dynamic and responsive web applications.</p>
+      </section>
     </section>
     <section id="latest-projects" class="latest-projects">
     </section>
