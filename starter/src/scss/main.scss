@@ -5,5 +5,12 @@
 @use "./blocks/main" as *;
 @use "./blocks/footer" as *;
 
+@include bio-avatar;
+@include bio-media;
+
+
+
+
+
 
 
