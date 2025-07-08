@@ -1,6 +1,8 @@
 // Fonts
 $header-font: 'Bebas Neue', sans-serif;
 $body-font: 'Montserrat', sans-serif;
+$btn-font-size: 1.2rem;
+$bold-font-weight: 700;
 
 // Dimensions
 $header-height: 60px;
@@ -10,8 +12,10 @@ $ul-list-style: none;
 $scale-factor: 1.5;
 $small-padding: 0.5rem;
 $medium-padding: 1rem;
+$btn-padding: 1rem 2rem;
 
 // Colors
-$header-color: #EDE4D9;
+$header-color: #D9DBD9;
 $body-bg-color: #F5F5F5;
-$reddish-orange: #EA5D43;
+$text-color: #283B42;
+$white-color: #FFF;
