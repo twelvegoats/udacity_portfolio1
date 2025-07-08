@@ -12,6 +12,28 @@
   align-items: center;
 }
 
+@mixin intro-buttons {
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 1rem;
+  }
+
+  .contact-btn {
+    background-color: $text-color;
+    color: $white-color;
+    font-size: $btn-font-size;
+    font-weight: $bold-font-weight;
+  }
+  .contact-btn,
+  .resume-btn {
+    padding: $btn-padding;
+    border: none;
+  }
+}
+
+
 @mixin bio-media {
   @media (max-width: 768px) {
     .header h2 {
@@ -31,14 +53,14 @@
       padding: 0;
       
       & .avatar {
-        width: 30vw;
-        height: 30vw;
+        width: 80vw;
+        height: 60vw;
         margin-top: 3.5rem;
       }
 
       & .intro {
-        width: 30vw;
-        height: auto;
+        width: 80vw;
+        height: 40vh;
       }
     }
   }
@@ -55,17 +77,13 @@
       gap: 6rem;
     }
     .bio .avatar {
-      width: 30vw;
-      height: 30vw;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
+      width: 25vw;
+      height: 25vh;
     }
     .bio .intro {
       width: 40vw;
-      height: auto;
-      aspect-ratio: auto;
-      object-fit: cover;
+      height: 25vh;
+
       padding-top: 1rem;
     }
   }
