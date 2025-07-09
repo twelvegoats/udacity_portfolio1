@@ -11,7 +11,6 @@
 }
 
 .header {
-    @include space-around;
     background-color: $header-color;
     height: $header-height;
     font-family: $header-font;
@@ -21,63 +20,99 @@
     left: 0;
     z-index: 1000;  
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    ul {
-        list-style:  none;
+    &__logo {
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;        
+      cursor: pointer;
+      &:hover {
+          transform: scale($scale-factor);
+          transition: transform 1s ease-in-out;
+          animation: shake 0.5s;
+      }
+    }
+
+    &__nav-menu {
+      ul.nav-menu__list {
+        list-style: none;
         display: flex;
         align-items: center;
         width: 100%;
         height: 100%;
         gap: 20px;
 
-        li {
-            font-size: 1.2rem;
-        }
-
-        li:hover {
+        li.nav-menu__item {
+          font-size: 1.2rem;
+          
+          &:hover {
             transform: scale($scale-factor);
             transition: transform 0.3s ease-in-out;
             color: $text-color;
             cursor: pointer;
+          }
+          
+          a.nav-menu__link {
+            color: inherit;
+            text-decoration: none;
+          }
         }
+      }
     }
 
-    & h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin: 0;        
-        cursor: pointer;
+    &__nav-toggle {
+      display: none;
     }
 
-    & h2:hover {
-        transform: scale($scale-factor);
-        transition: transform 1s ease-in-out;
-        animation: shake 0.5s;
+    &__hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      z-index: 1100;
+      &-bar {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: $text-color;
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
     }
 }
 
-.nav-toggle {
-  display: none;
-}
+@media (max-width: 768px) {
+    .header__hamburger {
+      display: flex;
+    }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  z-index: 1100;
-  span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: $text-color;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: 0.3s;
+    .header__nav-menu {
+      display: none;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background-color: $header-color;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .header__nav-toggle:checked + .header__hamburger + .header__nav-menu {
+      display: flex;
+    }
+
+    .header__nav-menu ul.nav-menu__list {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      padding: 2rem 0;
+    }
   }
-}
-
-@include header-mobile-menu;

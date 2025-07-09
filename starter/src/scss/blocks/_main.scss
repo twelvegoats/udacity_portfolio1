@@ -1,8 +1,7 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 
-
-#main {
+.main {
     background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
     background-size: cover;
     min-height: 60vh;  
@@ -15,14 +14,16 @@
   gap: 3rem;  
   background-size: cover;
 
-  .avatar {
+  .headshot {
+    &__img {
       width: 15vw;
-      height: 30h;
+      height: 30vh;
       object-fit: cover;
       display: block;
     }
+  }
 
-    .intro {
+  .intro {
     background-color: $header-color;
     width: 30vw;
     height: 30vh;
@@ -33,12 +34,42 @@
     color: $text-color;
     @include flex-center;
 
-      p{
-        padding: $medium-padding;
-      }
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
+    &__desc {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .btn-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      
+    }
+  }
 }
 
-@include bio-media;
-@include bio-avatar;
-@include intro-buttons;
+@media (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    gap: 2rem;
+
+    .headshot {
+      &__img {
+        width: 80vw;
+        height: 40vh;
+        padding-top: 3rem;;
+      }
+    }
+
+    .intro {
+      width: 80vw;
+      height: auto;
+      padding: $medium-padding;
+    }
+  }
+}
+
