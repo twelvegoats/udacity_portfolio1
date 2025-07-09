@@ -12,102 +12,28 @@
   align-items: center;
 }
 
-@mixin intro-buttons {
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 1rem;
-  }
-
-  .contact-btn {
-    background-color: $text-color;
-    color: $white-color;
-    font-size: $btn-font-size;
-    font-weight: $bold-font-weight;
-  }
-  .contact-btn,
-  .resume-btn {
-    padding: $btn-padding;
-    border: none;
-  }
-}
-
-
-@mixin bio-media {
-  @media (max-width: 768px) {
-    .header h2 {
-      transition: transform 0.3s ease-in-out;
-      will-change: transform;
-      cursor: pointer;
-    }
-    .header h2:hover {
-      transform: scale($scale-factor);
-      animation: shake 0.5s;
-    }
-    .bio {
-      flex-direction: column;
-      text-align: center;
-      gap: 2rem;
-      background-size: contain;
-      padding: 0;
-      
-      & .avatar {
-        width: 80vw;
-        height: 60vw;
-        margin-top: 3.5rem;
-      }
-
-      & .intro {
-        width: 80vw;
-        height: 40vh;
-      }
-    }
-  }
-}
-
-@mixin bio-avatar {
-  @media (max-width: 900px) {
-    .bio {
-      flex-direction: row;
-      text-align: center;
-      gap: 1rem;
-      background-size: contain;
-      padding: 0;
-      gap: 6rem;
-    }
-    .bio .avatar {
-      width: 25vw;
-      height: 25vh;
-    }
-    .bio .intro {
-      width: 40vw;
-      height: 25vh;
-
-      padding-top: 1rem;
-    }
-  }
-}
-
 @mixin header-mobile-menu {
   @media (max-width: 768px) {
     .hamburger {
       display: flex;
     }
+
     .nav-menu {
       display: none;
       position: absolute;
       top: $header-height;
       left: 0;
       width: 100%;
-      background: $header-color;
+      background-color: $header-color;
       flex-direction: column;
       align-items: center;
       z-index: 1000;
     }
-    .nav-toggle:checked + .hamburger + .nav-menu {
+
+    .nav-toggle:checked + .nav-menu {
       display: flex;
     }
+
     .header nav ul {
       flex-direction: column;
       gap: 2rem;
