@@ -12,33 +12,3 @@
   align-items: center;
 }
 
-@mixin header-mobile-menu {
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-
-    .nav-menu {
-      display: none;
-      position: absolute;
-      top: $header-height;
-      left: 0;
-      width: 100%;
-      background-color: $header-color;
-      flex-direction: column;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .nav-toggle:checked + .nav-menu {
-      display: flex;
-    }
-
-    .header nav ul {
-      flex-direction: column;
-      gap: 2rem;
-      width: 100%;
-      padding: 2rem 0;
-    }
-  }
-}

@@ -25,9 +25,6 @@
   }
 }
 .header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #D9DBD9;
   height: 60px;
   font-family: "Bebas Neue", sans-serif;
@@ -37,8 +34,23 @@
   left: 0;
   z-index: 1000;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.header ul {
+.header__logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  cursor: pointer;
+}
+.header__logo:hover {
+  transform: scale(1.5);
+  transition: transform 1s ease-in-out;
+  animation: shake 0.5s;
+}
+.header__nav-menu ul.nav-menu__list {
   list-style: none;
   display: flex;
   align-items: center;
@@ -46,33 +58,23 @@
   height: 100%;
   gap: 20px;
 }
-.header ul li {
+.header__nav-menu ul.nav-menu__list li.nav-menu__item {
   font-size: 1.2rem;
 }
-.header ul li:hover {
+.header__nav-menu ul.nav-menu__list li.nav-menu__item:hover {
   transform: scale(1.5);
   transition: transform 0.3s ease-in-out;
   color: #283B42;
   cursor: pointer;
 }
-.header h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-  cursor: pointer;
+.header__nav-menu ul.nav-menu__list li.nav-menu__item a.nav-menu__link {
+  color: inherit;
+  text-decoration: none;
 }
-.header h2:hover {
-  transform: scale(1.5);
-  transition: transform 1s ease-in-out;
-  animation: shake 0.5s;
-}
-
-.nav-toggle {
+.header__nav-toggle {
   display: none;
 }
-
-.hamburger {
+.header__hamburger {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +83,7 @@
   cursor: pointer;
   z-index: 1100;
 }
-.hamburger span {
+.header__hamburger-bar {
   display: block;
   height: 3px;
   width: 100%;
@@ -92,31 +94,31 @@
 }
 
 @media (max-width: 768px) {
-  .hamburger {
+  .header__hamburger {
     display: flex;
   }
-  .nav-menu {
+  .header__nav-menu {
     display: none;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background: #D9DBD9;
+    background-color: #D9DBD9;
     flex-direction: column;
     align-items: center;
     z-index: 1000;
   }
-  .nav-toggle:checked + .hamburger + .nav-menu {
+  .header__nav-toggle:checked + .header__hamburger + .header__nav-menu {
     display: flex;
   }
-  .header nav ul {
+  .header__nav-menu ul.nav-menu__list {
     flex-direction: column;
     gap: 2rem;
     width: 100%;
     padding: 2rem 0;
   }
 }
-#main {
+.main {
   background-image: url("../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg");
   background-size: cover;
   min-height: 60vh;
@@ -133,9 +135,9 @@
   gap: 3rem;
   background-size: cover;
 }
-.bio .avatar {
+.bio .headshot__img {
   width: 15vw;
-  height: 30h;
+  height: 30vh;
   object-fit: cover;
   display: block;
 }
@@ -152,119 +154,36 @@
   justify-content: center;
   align-items: center;
 }
-.bio .intro p {
-  padding: 1rem;
+.bio .intro__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
-
-@media (max-width: 768px) {
-  .header h2 {
-    transition: transform 0.3s ease-in-out;
-    will-change: transform;
-    cursor: pointer;
-  }
-  .header h2:hover {
-    transform: scale(1.5);
-    animation: shake 0.5s;
-  }
-  .bio {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-    background-size: contain;
-    padding: 0;
-  }
-  .bio .avatar {
-    width: 80vw;
-    height: 60vw;
-    margin-top: 3.5rem;
-  }
-  .bio .intro {
-    width: 80vw;
-    height: 40vh;
-  }
+.bio .intro__desc {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
-@media (max-width: 900px) {
-  .bio {
-    flex-direction: row;
-    text-align: center;
-    gap: 1rem;
-    background-size: contain;
-    padding: 0;
-    gap: 6rem;
-  }
-  .bio .avatar {
-    width: 25vw;
-    height: 25vh;
-  }
-  .bio .intro {
-    width: 40vw;
-    height: 25vh;
-    padding-top: 1rem;
-  }
-}
-.btn-container {
+.bio .intro .btn-container {
   display: flex;
+  gap: 1rem;
   justify-content: center;
-  gap: 4rem;
-  margin-top: 1rem;
 }
 
-.contact-btn {
-  background-color: #283B42;
-  color: #FFF;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.contact-btn,
-.resume-btn {
-  padding: 1rem 2rem;
-  border: none;
-}
-
-@media (max-width: 900px) {
-  .bio {
-    flex-direction: row;
-    text-align: center;
-    gap: 1rem;
-    background-size: contain;
-    padding: 0;
-    gap: 6rem;
-  }
-  .bio .avatar {
-    width: 25vw;
-    height: 25vh;
-  }
-  .bio .intro {
-    width: 40vw;
-    height: 25vh;
-    padding-top: 1rem;
-  }
-}
 @media (max-width: 768px) {
-  .header h2 {
-    transition: transform 0.3s ease-in-out;
-    will-change: transform;
-    cursor: pointer;
-  }
-  .header h2:hover {
-    transform: scale(1.5);
-    animation: shake 0.5s;
-  }
   .bio {
     flex-direction: column;
-    text-align: center;
     gap: 2rem;
-    background-size: contain;
-    padding: 0;
   }
-  .bio .avatar {
+  .bio .headshot__img {
     width: 80vw;
-    height: 60vw;
-    margin-top: 3.5rem;
+    height: 40vh;
+    padding-top: 3rem;
   }
   .bio .intro {
     width: 80vw;
-    height: 40vh;
+    height: auto;
+    padding: 1rem;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
