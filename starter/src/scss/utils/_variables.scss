@@ -4,18 +4,26 @@ $body-font: 'Montserrat', sans-serif;
 $btn-font-size: 1.2rem;
 $bold-font-weight: 700;
 
+// Fonts
+$header-font: "Montserrat", sans-serif;
+$body-font: "Montserrat", sans-serif;
+
 // Dimensions
-$header-height: 60px;
+$header-height: 3.75rem;
+$footer-height: 3.75rem;
 
 // General
-$ul-list-style: none;
 $scale-factor: 1.5;
+
+// Padding, Margin, & Gaps
 $small-padding: 0.5rem;
 $medium-padding: 1rem;
+$large-padding: 1.5rem;
 $btn-padding: 1rem 2rem;
 
 // Colors
-$header-color: #D9DBD9;
-$body-bg-color: #F5F5F5;
-$text-color: #283B42;
-$white-color: #FFF;
+$header-footer-color: #D9DBD9;
+$body-color: #F5F5F5;
+$dark-text-color: #283B42;
+$light-text-color: #8D9EA0;
+$white: #FFF;
