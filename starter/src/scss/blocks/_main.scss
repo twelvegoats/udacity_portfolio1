@@ -2,11 +2,19 @@
 @use "../utils/mixins" as *;
 
 .main {
-    background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
-    background-size: cover;
-    height: 60vh;  
+    
     padding: 2rem 0;
+    flex-direction: column;
     @include flex-center;
+    
+}
+
+.main__welcome-section {
+  height: 60vh;
+  background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
+  background-size: cover;
+  width: 100%;
+  @include flex-center;
 }
 
 .bio {
@@ -53,19 +61,16 @@
 }
 
 @media (max-width: 768px) {
-  .main {
-    height: 80vh;
-  }
-
-  .bio {
+  .main__welcome-section {
+    height: 100vh;
+    .bio {
     flex-direction: column;
     gap: 2rem;
 
     .headshot {
       &__img {
         width: 80vw;
-        height: 40vh;
-        padding-top: 3rem;;
+        height: auto;
       }
     }
 
@@ -76,4 +81,7 @@
     }
   }
 }
+}
+  
+
 
