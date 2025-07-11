@@ -4,14 +4,21 @@
   "description": "Udacity Portfolio Project",
   "main": "src/main.js",
   "scripts": {
-    "build:css": "sass src/scss/main.scss:dist/main.css --no-source-map --style=expanded",
-    "watch:css": "sass --watch src/scss/main.scss:dist/main.css --no-source-map --style=expanded",
-    "start": "npm run watch:css"
+    "build:css": "sass src/scss/main.scss:src/dist/main.css --no-source-map --style=expanded",
+    "watch:css": "sass --watch src/scss/main.scss:src/dist/main.css --no-source-map --style=expanded",
+    "build": "npm run build:css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d src"
   },
-  "keywords": ["portfolio", "udacity", "frontend"],
+  "keywords": [
+    "portfolio",
+    "udacity",
+    "frontend"
+  ],
   "author": "Sean",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.32.8"
   }
 }
