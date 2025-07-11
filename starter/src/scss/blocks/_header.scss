@@ -14,7 +14,7 @@
     background-color: $header-footer-color;
     height: $header-height;
     font-family: $header-font;
-    color: $dark-text-color;
+    color: $dark-color;
     position: fixed;  
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@
           &:hover {
             transform: scale($scale-factor);
             transition: transform 0.3s ease-in-out;
-            color: $dark-text-color;
+            color: $dark-color;
             cursor: pointer;
           }
           
@@ -81,7 +81,7 @@
         display: block;
         height: 3px;
         width: 100%;
-        background: $dark-text-color;
+        background: $dark-color;
         margin: 4px 0;
         border-radius: 2px;
         transition: 0.3s;
