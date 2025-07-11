@@ -1,0 +1,88 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.main {
+    padding-top: $header-height;
+    flex-direction: column;
+    @include flex-center;
+}
+
+.main__welcome-section {
+    min-height: calc(100vh - #{$header-height}); // Subtract header height
+    background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    @include flex-center;
+    padding: 2rem 0;
+}
+
+.bio {
+    @include flex-center;
+    gap: 3rem;  
+    background-size: cover;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .headshot {
+        &__img {
+            width: 50vh;
+            height: 50vh;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .intro {
+        background-color: $header-footer-color;
+        height: 50vh;
+        width: 50vw;
+        padding: $medium-padding;
+        text-align: center;      
+        flex-direction: column;
+        gap: 1rem;
+        color: $dark-color;
+        @include flex-center;
+
+        &__title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        &__desc {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main__welcome-section {
+        min-height: calc(80vh - #{$header-height});
+        background: $dark-color;
+    }
+
+    .bio {
+        flex-direction: column;
+        gap: 2rem;
+
+        .headshot {
+            &__img {
+                width: 80vw;
+                height: auto;
+            }
+        }
+
+        .intro {
+            width: 80vw;
+            height: auto;
+            padding: $medium-padding;
+        }
+    }
+}

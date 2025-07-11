@@ -1,0 +1,20 @@
+@use "../utils/variables" as *;
+
+.btn {
+    padding: $btn-padding;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    width: 75%;
+    font-weight: bold;
+}
+
+.btn-container__contact-button {
+    background-color: $dark-color;
+    color: $white;
+}
+
+.btn-container__contact-button:hover {
+    background-color: #9D00DD;
+}
+
