@@ -8,7 +8,7 @@
 }
 
 .main__welcome-section {
-    min-height: calc(100vh - #{$header-height}); // Subtract header height
+    min-height: calc(60vh - #{$header-height});
     background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
 
 .bio {
     @include flex-center;
-    gap: 3rem;  
+    gap: 5rem;  
     background-size: cover;
     width: 100%;
     max-width: 1200px;
@@ -27,8 +27,8 @@
 
     .headshot {
         &__img {
-            width: 50vh;
-            height: 50vh;
+            width: 40vh;
+            height: 40vh;
             object-fit: cover;
             display: block;
         }
@@ -36,8 +36,8 @@
 
     .intro {
         background-color: $header-footer-color;
-        height: 50vh;
-        width: 50vw;
+        height: 40vh;
+        width: 28vw;
         padding: $medium-padding;
         text-align: center;      
         flex-direction: column;
