@@ -15,6 +15,16 @@
 }
 
 .btn-container__contact-button:hover {
-    background-color: #9D00DD;
+    background-color: #AD7D73;
+}
+
+.btn-container__resume-button {
+    background-color: $white;
+    color: $dark-color;
+}
+
+.btn-container__resume-button:hover {
+    background-color: #5E94A6;
+    color: $white;
 }
 
