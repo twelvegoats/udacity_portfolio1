@@ -19,7 +19,17 @@
 }
 
 .btn-container__contact-button:hover {
-  background-color: #9D00DD;
+  background-color: #AD7D73;
+}
+
+.btn-container__resume-button {
+  background-color: #FFF;
+  color: #283B42;
+}
+
+.btn-container__resume-button:hover {
+  background-color: #5E94A6;
+  color: #FFF;
 }
 
 @keyframes shake {
@@ -159,7 +169,7 @@
 }
 
 .main__welcome-section {
-  min-height: calc(100vh - 3.75rem);
+  min-height: calc(60vh - 3.75rem);
   background-image: url("../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg");
   background-size: cover;
   background-position: center;
@@ -174,22 +184,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
   background-size: cover;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 .bio .headshot__img {
-  width: 50vh;
-  height: 50vh;
+  width: 40vh;
+  height: 40vh;
   object-fit: cover;
   display: block;
 }
 .bio .intro {
   background-color: #D9DBD9;
-  height: 50vh;
-  width: 50vw;
+  height: 40vh;
+  width: 28vw;
   padding: 1rem;
   text-align: center;
   flex-direction: column;
@@ -232,7 +242,4 @@
     height: auto;
     padding: 1rem;
   }
-}
-.latest-projects {
-  height: 500vh;
 }
