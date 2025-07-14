@@ -29,7 +29,7 @@
     <nav class="header__nav-menu">
       <ul class="nav-menu__list">
         <li class="nav-menu__item"><a href="#skills" class="nav-menu__link">Skills</a></li>
-        <li class="nav-menu__item"><a href="#projects" class="nav-menu__link">Projects</a></li>
+        <li class="nav-menu__item"><a href="#latest-projects" class="nav-menu__link">Projects</a></li>
         <li class="nav-menu__item"><a href="#resume" class="nav-menu__link">Resume</a></li>
         <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Contact</a></li>
       </ul>
@@ -39,14 +39,18 @@
     <section class="main__welcome-section">
       <div class="bio" id="bio">
         <div class="headshot">
-          <img src="./img/Avatar.jpeg" alt="Image of an avatar" class="headshot__img">
+          <img src="./img/Avatar.jpeg" alt="Sean's professional headshot" class="headshot__img">
         </div>
         <div class="intro">
           <h1 class="intro__title">Hello, I'm Sean</h1>
           <p class="intro__desc">I'm a passionate web developer with a knack for creating dynamic and responsive web applications.</p>
           <div class="btn-container">
-            <button class="btn-container__contact-button btn">Contact Me</button>
-            <button class="btn-container__resume-button btn">Download Resume</button>
+            <a href="mailto:twelvegoats@protonmail.com" 
+            class="btn-container__contact-button btn">Contact Me</a>
+            <a href="./docs/sean_wildman_resume.pdf" 
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="btn-container__resume-button btn">Download Resume</a>
           </div>
         </div>
       </div>
@@ -55,26 +59,51 @@
     <section id="latest-projects" class="latest-projects">
       <h2 class="latest-projects__title">Latest Projects</h2>
       <div class="latest-projects__card-container">
+        
         <article class="project-card">
-          <h3 class="project-card__title">Project 1</h3>
-          <p class="project-card__desc">A brief description of the project goes here.</p>
-          <img src="./img/project.jpg" alt="Screenshot of Project 1">
+          <h3 class="project-card__title">Animal Trading Card</h3>
+          <p class="project-card__desc">First Project From the Front-end Developer Nanodegree (Udacity)</p>
+          <img src="./img/udacity_animal_card.png" alt="Screenshot of Animal Trading Card" class="project-card__img">
+          <a href="https://github.com/twelvegoats/project_animal_trading_card" 
+          class="project-card__btn" 
+           aria-label="View Animal Trading Card project on GitHub"
+          target="_blank" 
+          rel="noopener noreferrer">
+          GitHub
+          </a>
         </article>
+
         <article class="project-card">
-          <h3 class="project-card__title">Project 2</h3>
-          <p class="project-card__desc">A brief description of the project goes here.</p>
-          <img src="./img/project.jpg" alt="Screenshot of Project 2">
+          <h3 class="project-card__title">Recipes Project</h3>
+          <p class="project-card__desc">First HTML Project From The Odin Project</p>
+          <img src="./img/odin_recipes.png" alt="Screenshot of Recipe Project" class="project-card__img">
+          <a href="https://github.com/twelvegoats/odin_recipes" 
+            class="project-card__btn"
+            aria-label="View Recipes Project on GitHub"
+            target="_blank" 
+            rel="noopener noreferrer">
+            GitHub
+          </a>
         </article>
+        
         <article class="project-card">
-          <h3 class="project-card__title">Project 3</h3>
-          <p class="project-card__desc">A brief description of the project goes here.</p>
-          <img src="./img/project.jpg" alt="Screenshot of Project 3">
+          <h3 class="project-card__title">Filler</h3>
+          <p class="project-card__desc">You Can Find Free Stock Images on Pexels</p>
+          <img src="./img/pexels-pixabay-270404.jpg" alt="Image of a computer screen with code" class="project-card__img">
+          <a href="https://www.pexels.com/photo/270404/" 
+            class="project-card__btn" 
+            aria-label="View source image on Pexels"
+            target="_blank" 
+            rel="noopener noreferrer">
+            Pexels
+          </a>
         </article>
       </div>
-      <button>See More...</button>
+      <a href="#latest-projects" class="btn">See More...</a>
     </section>
   </main>
   <footer class="footer">
+    <p>&copy; 2025 Sean Wildman. All Rights Reserved.</p>
   </footer>
   <!-- Scripts -->
   <script src="./main.js"></script>
