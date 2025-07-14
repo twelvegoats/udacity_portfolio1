@@ -1,0 +1,11 @@
+@use "../base/resets" as *;
+@use "../base/base" as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+
+.footer {
+    height: $footer-height;
+    font-weight: $bold-font-weight;
+    @include flex-center;
+}
