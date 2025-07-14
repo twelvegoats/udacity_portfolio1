@@ -65,7 +65,12 @@
     background: linear-gradient(90deg, $light-blue 0%, color.adjust($light-blue, $lightness: -10%) 100%);
     border-radius: 4px;
     width: 0%;
-    position: relative;    
+    position: relative;  
+
+    &[data-width="90"] { width: 90%; } 
+    &[data-width="85"] { width: 85%; }
+    &[data-width="25"] { width: 25%; }
+    &[data-width="80"] { width: 80%; }
   }
 }
 
