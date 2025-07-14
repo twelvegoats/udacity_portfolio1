@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../base/base" as *;
 
 .main {
     padding-top: $header-height;
@@ -35,7 +36,7 @@
     }
 
     .intro {
-        background-color: $header-footer-color;
+        background-color: $light-gray;
         height: 40vh;
         width: 28vw;
         padding: $medium-padding;
@@ -46,9 +47,10 @@
         @include flex-center;
 
         &__title {
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
+            font-family: $heading-font;
         }
         &__desc {
             font-size: 1.1rem;
