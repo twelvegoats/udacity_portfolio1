@@ -1,5 +1,7 @@
 @use "../utils/variables" as *;
+@use "../base/base" as *;
 @use "../utils/mixins" as *;
+
 
 @keyframes shake {
   0% { transform: translateX(0); }
@@ -11,9 +13,9 @@
 }
 
 .header {
-    background-color: $header-footer-color;
+    background-color: $light-gray;
     height: $header-height;
-    font-family: $header-font;
+    font-family: $heading-font;
     color: $dark-color;
     position: fixed;  
     top: 0;
@@ -117,7 +119,7 @@
       top: $header-height;
       left: 0;
       width: 100%;
-      background-color: $header-footer-color;
+      background-color: $light-gray;
       flex-direction: column;
       align-items: center;
       z-index: 1000;
