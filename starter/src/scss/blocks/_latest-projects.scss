@@ -3,4 +3,20 @@
 @use "../utils/mixins" as *;
 @use "./cards" as *;
 
+.latest-projects {
+    height: 50vh;
+    @include space-around;
+    flex-direction: column;
+    background-color: $dark-color;
+    color: $white;
+    width: 100%;
+}
+
+.latest-projects__card-container {
+    @include flex-center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
 
