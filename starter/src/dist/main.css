@@ -355,6 +355,88 @@ a {
     padding: 1rem;
   }
 }
+.skills {
+  padding: 4rem 2rem;
+  background-color: #FFF;
+  min-height: 60vh;
+}
+.skills__container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.skills__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #283B42;
+  text-transform: uppercase;
+}
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+.skill__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.skill__name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #283B42;
+}
+.skill__percentage {
+  font-weight: 500;
+  color: #5E94A6;
+  font-size: 0.9rem;
+}
+.skill__bar {
+  width: 100%;
+  height: 8px;
+  background-color: #D9DBD9;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.skill__progress {
+  height: 100%;
+  background: linear-gradient(90deg, #5E94A6 0%, rgb(74.404, 119.548, 134.596) 100%);
+  border-radius: 4px;
+  width: 0%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+  .skills__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .skill {
+    margin-bottom: 1rem;
+  }
+  .skill__name {
+    font-size: 1rem;
+  }
+  .skill__percentage {
+    font-size: 0.8rem;
+  }
+}
 .project-card {
   background-color: #D9DBD9;
   border-radius: 8px;
@@ -384,15 +466,15 @@ a {
   border-radius: 8px;
   margin-bottom: 1.5rem;
 }
-.project-card__btn:hover {
+.project-card:hover {
   background-color: #5E94A6;
 }
-.project-card__btn:focus-visible {
+.project-card:focus-visible {
   background-color: #5E94A6;
   outline: 2px solid #ffffff;
 }
 @media (prefers-reduced-motion: reduce) {
-  .project-card__btn {
+  .project-card {
     transition: none;
   }
 }
@@ -430,4 +512,11 @@ a {
   .latest-projects__card-container {
     gap: 2rem;
   }
+}
+.footer {
+  height: 3.75rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
