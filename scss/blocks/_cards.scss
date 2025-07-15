@@ -1,0 +1,38 @@
+@use "../utils/variables" as *;
+@use "../blocks/buttons" as *;
+@use "../utils/mixins" as *;
+@use "../base/base" as *;
+
+.project-card {
+    background-color: $light-gray;
+    border-radius: 8px;
+    padding: $large-padding;
+    width: 18.75rem;
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 1.5rem;
+        font-family: $heading-font;
+        color: $dark-color;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        color: $dark-color;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        flex-grow: 1;
+        font-size: 0.85rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: 12.5rem;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }            
+        
+}
