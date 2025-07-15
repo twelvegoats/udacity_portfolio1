@@ -11,6 +11,23 @@
     height: 27rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus {
+            transform: none;
+            box-shadow: none;
+        }
+    }
 
     &__title {
         font-size: 1.5rem;
@@ -33,6 +50,7 @@
         object-fit: cover;
         border-radius: 8px;
         margin-bottom: 1.5rem;
-    }            
-        
+    }
+    
+    
 }

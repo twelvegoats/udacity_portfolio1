@@ -8,6 +8,7 @@
     .project-card__btn {
         width: 100%;
         font-size: 0.9rem;
+        @include flex-center;
     }
 
     .header__nav-menu {
@@ -74,6 +75,14 @@
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
+    .btn-container__contact-button,
+    .btn-container__resume-button,
+    .project-card__btn {
+        width: 100%;
+        font-size: 0.9rem;
+        @include flex-center;
+    }
+
     .main__welcome-section {
         min-height: calc(80vh - #{$header-height});
         background: $dark-color;    
@@ -111,9 +120,6 @@
         .btn-container {
             margin-top: 1rem;
             
-            .btn-container__contact-button {
-                @include flex-center;
-            }
         }
     }
 
