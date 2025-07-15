@@ -5,7 +5,7 @@
 @use "./cards" as *;
 
 .latest-projects {
-    height: 70vh;
+    height: auto;
     @include space-around;
     flex-direction: column;
     background-color: $dark-color;

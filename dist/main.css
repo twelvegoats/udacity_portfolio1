@@ -317,7 +317,7 @@ a {
 }
 
 .latest-projects {
-  height: 70vh;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -423,6 +423,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem 1.5rem;
   }
   .header__nav-menu {
     display: none;
