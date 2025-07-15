@@ -33,18 +33,6 @@
         object-fit: cover;
         border-radius: 8px;
         margin-bottom: 1.5rem;
-    }
-            
-        &:hover {
-            background-color: #5E94A6;
-        }
+    }            
         
-        &:focus-visible {
-            background-color: #5E94A6;
-            outline: 2px solid #ffffff;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-    }
+}
