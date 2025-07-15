@@ -6,6 +6,5 @@
 
 .footer {
     height: $footer-height;
-    font-weight: $bold-font-weight;
     @include flex-center;
 }
