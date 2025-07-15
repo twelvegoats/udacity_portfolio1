@@ -1,0 +1,124 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/base" as *;
+
+@media (max-width: 768px) {
+    .btn-container__contact-button,
+    .btn-container__resume-button,
+    .project-card__btn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .header__nav-menu {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    .header__nav-menu {
+        display: none;
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        background-color: $light-gray;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .header__nav-toggle:checked + .header__hamburger + .header__nav-menu {
+        display: flex;
+    }
+
+    .header__nav-menu ul.nav-menu__list {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .latest-projects {
+        height: auto;
+    }
+
+    .latest-projects__card-container {
+        gap: 2rem;
+    }
+
+    .main__welcome-section {
+        min-height: calc(80vh - #{$header-height});
+        background: $dark-color;
+    }
+
+    .bio {
+        flex-direction: column;
+        gap: 2rem;
+
+        .headshot {
+            &__img {
+                width: 80vw;
+                height: auto;
+            }
+        }
+
+        .intro {
+            width: 80vw;
+            height: auto;
+            padding: $medium-padding;
+        }
+    }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+    .main__welcome-section {
+        min-height: calc(80vh - #{$header-height});
+        background: $dark-color;    
+    }
+
+    .bio {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+
+        .headshot {
+            &__img {
+                width: 40vw;
+                height: auto;
+            }
+        }
+
+        .intro {
+            width: 80vw;
+            height: auto;
+            padding: $medium-padding;
+            gap: 0;
+
+            .intro__title {
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            .intro__desc {
+                margin: 0;
+                font-size: 1rem;
+            }
+        }
+
+        .btn-container {
+            margin-top: 1rem;
+            
+            .btn-container__contact-button {
+                @include flex-center;
+            }
+        }
+    }
+
+    .latest-projects {
+        height: auto;
+
+    }
+}
