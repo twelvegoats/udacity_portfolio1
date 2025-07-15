@@ -47,4 +47,4 @@ This project has been an excellent opportunity to apply and expand my web develo
 
 ### Screenshot
 <img src="./starter/src/img/udacity_portfolio1.png">
-<a href="https://twelvegoats.github.io/udacity_portfolio1/">See on GitHub</a>
+<a href="https://twelvegoats.github.io/udacity_portfolio1/" target="_blank">See on GitHub</a>
