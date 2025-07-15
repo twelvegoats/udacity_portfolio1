@@ -63,28 +63,3 @@
         }
     }
 }
-
-@media (max-width: 768px) {
-    .main__welcome-section {
-        min-height: calc(80vh - #{$header-height});
-        background: $dark-color;
-    }
-
-    .bio {
-        flex-direction: column;
-        gap: 2rem;
-
-        .headshot {
-            &__img {
-                width: 80vw;
-                height: auto;
-            }
-        }
-
-        .intro {
-            width: 80vw;
-            height: auto;
-            padding: $medium-padding;
-        }
-    }
-}
