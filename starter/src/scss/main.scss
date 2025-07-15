@@ -1,12 +1,12 @@
-@use "./utils/variables" as *;
 @use "./base/resets" as *;
-@use "./blocks/buttons" as *;
+@use "./utils/variables" as *;
 @use "./utils/mixins" as *;
+@use "./blocks/buttons" as *;
 @use "./blocks/header" as *;
-@use "./blocks/main" as *;
-@use "./blocks/skills" as *;
 @use "./blocks/latest-projects" as *;
 @use "./blocks/footer" as *;
+@use "./blocks/main" as *;
+@use "./utils/media-queries" as *;
 
 
 
