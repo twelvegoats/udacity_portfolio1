@@ -94,6 +94,11 @@
 .project-card__btn:active {
   background-color: #5E94A6;
 }
+@media (prefers-reduced-motion: reduce) {
+  .project-card__btn {
+    transition: none;
+  }
+}
 
 .latest-projects .btn {
   background-color: #FFF;
@@ -137,6 +142,11 @@ html {
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -189,6 +199,13 @@ a {
   transform: scale(1.5);
   transition: transform 1s ease-in-out;
   animation: shake 0.5s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .header .header__logo:hover {
+    animation: none;
+    transform: scale(1.5);
+    transition: transform 1s ease-in-out;
+  }
 }
 .header__nav-menu ul.nav-menu__list {
   list-style: none;
@@ -243,34 +260,70 @@ a {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-  .header__nav-menu {
-    display: none;
-  }
-  .header__hamburger {
-    display: flex;
-  }
-  .header__nav-menu {
-    display: none;
-    position: absolute;
-    top: 3.75rem;
-    left: 0;
-    width: 100%;
-    background-color: #D9DBD9;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-  }
-  .header__nav-toggle:checked + .header__hamburger + .header__nav-menu {
-    display: flex;
-  }
-  .header__nav-menu ul.nav-menu__list {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    padding: 2rem 0;
-  }
+.project-card {
+  background-color: #D9DBD9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 18.75rem;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
 }
+.project-card__title {
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #283B42;
+  margin-bottom: 1rem;
+}
+.project-card__desc {
+  color: #283B42;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  font-size: 0.85rem;
+}
+.project-card__img {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.latest-projects {
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #283B42;
+  color: #FFF;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.latest-projects__title {
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 2rem 0;
+}
+.latest-projects__card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  height: 3.75rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   padding-top: 3.75rem;
   flex-direction: column;
@@ -337,6 +390,44 @@ a {
 }
 
 @media (max-width: 768px) {
+  .btn-container__contact-button,
+  .btn-container__resume-button,
+  .project-card__btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .header__nav-menu {
+    display: none;
+  }
+  .header__hamburger {
+    display: flex;
+  }
+  .header__nav-menu {
+    display: none;
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    width: 100%;
+    background-color: #D9DBD9;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+  .header__nav-toggle:checked + .header__hamburger + .header__nav-menu {
+    display: flex;
+  }
+  .header__nav-menu ul.nav-menu__list {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .latest-projects {
+    height: auto;
+  }
+  .latest-projects__card-container {
+    gap: 2rem;
+  }
   .main__welcome-section {
     min-height: calc(80vh - 3.75rem);
     background: #283B42;
@@ -355,180 +446,44 @@ a {
     padding: 1rem;
   }
 }
-.skills {
-  padding: 4rem 2rem;
-  background-color: #FFF;
-  min-height: 60vh;
-}
-.skills__container {
-  max-width: 75rem;
-  margin: 0 auto;
-}
-.skills__title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #283B42;
-  text-transform: uppercase;
-}
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-  gap: 2rem;
-  max-width: 50rem;
-  margin: 0 auto;
-}
-
-.skill {
-  margin-bottom: 1.5rem;
-}
-.skill__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-.skill__name {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #283B42;
-}
-.skill__percentage {
-  font-weight: 500;
-  color: #5E94A6;
-  font-size: 0.9rem;
-}
-.skill__bar {
-  width: 100%;
-  height: 8px;
-  background-color: #D9DBD9;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-.skill__progress {
-  height: 100%;
-  background: linear-gradient(90deg, #5E94A6 0%, rgb(74.404, 119.548, 134.596) 100%);
-  border-radius: 4px;
-  width: 0%;
-  position: relative;
-}
-.skill__progress[data-width="90"] {
-  width: 90%;
-}
-.skill__progress[data-width="85"] {
-  width: 85%;
-}
-.skill__progress[data-width="25"] {
-  width: 25%;
-}
-.skill__progress[data-width="80"] {
-  width: 80%;
-}
-
-@media (max-width: 768px) {
-  .skills {
-    padding: 3rem 1rem;
+@media (max-width: 950px) and (orientation: landscape) {
+  .main__welcome-section {
+    min-height: calc(80vh - 3.75rem);
+    background: #283B42;
   }
-  .skills__title {
+  .bio {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+  .bio .headshot__img {
+    width: 40vw;
+    height: auto;
+  }
+  .bio .intro {
+    width: 80vw;
+    height: auto;
+    padding: 1rem;
+    gap: 0;
+  }
+  .bio .intro .intro__title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 0;
   }
-  .skills__grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .skill {
-    margin-bottom: 1rem;
-  }
-  .skill__name {
+  .bio .intro .intro__desc {
+    margin: 0;
     font-size: 1rem;
   }
-  .skill__percentage {
-    font-size: 0.8rem;
+  .bio .btn-container {
+    margin-top: 1rem;
   }
-}
-.project-card {
-  background-color: #D9DBD9;
-  border-radius: 8px;
-  padding: 1.5rem;
-  width: 18.75rem;
-  height: 27rem;
-  display: flex;
-  flex-direction: column;
-}
-.project-card__title {
-  font-size: 1.5rem;
-  font-family: "Bebas Neue", sans-serif;
-  color: #283B42;
-  margin-bottom: 1rem;
-}
-.project-card__desc {
-  color: #283B42;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  flex-grow: 1;
-  font-size: 0.85rem;
-}
-.project-card__img {
-  width: 100%;
-  height: 12.5rem;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-.project-card:hover {
-  background-color: #5E94A6;
-}
-.project-card:focus-visible {
-  background-color: #5E94A6;
-  outline: 2px solid #ffffff;
-}
-@media (prefers-reduced-motion: reduce) {
-  .project-card {
-    transition: none;
+  .bio .btn-container .btn-container__contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
-
-.latest-projects {
-  height: 70vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  background-color: #283B42;
-  color: #FFF;
-  width: 100%;
-  padding-bottom: 2rem;
-}
-.latest-projects__title {
-  font-size: 2.5rem;
-  font-family: "Bebas Neue", sans-serif;
-  margin: 2rem 0;
-}
-.latest-projects__card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  flex-wrap: wrap;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 768px) {
   .latest-projects {
     height: auto;
   }
-  .latest-projects__card-container {
-    gap: 2rem;
-  }
-}
-.footer {
-  height: 3.75rem;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
