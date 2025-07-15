@@ -39,17 +39,17 @@
   background-color: #405f6a;
 }
 .btn-container__contact-button:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   outline: 3px solid #FFF;
   outline-offset: 2px;
 }
 .btn-container__contact-button:active {
-  background-color: #5E94A6;
+  background-color: #405F68;
 }
 
 .btn-container__resume-button {
-  background-color: #5E94A6;
-  color: #FFF;
+  background-color: #FFF;
+  color: #283B42;
   border: 2px solid transparent;
   text-align: center;
   display: inline-block;
@@ -62,20 +62,19 @@
   border-color: #405f6a;
 }
 .btn-container__resume-button:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   color: #FFF;
-  border-color: #5E94A6;
+  border-color: #405F68;
   outline: 3px solid #FFF;
   outline-offset: 2px;
 }
 .btn-container__resume-button:active {
-  background-color: #5E94A6;
-  border-color: #5E94A6;
+  background-color: #405F68;
+  border-color: #405F68;
   color: #FFF;
 }
 
 .project-card__btn {
-  background-color: #FFF;
   padding: 0.75rem 2rem;
   cursor: pointer;
   border: none;
@@ -95,20 +94,20 @@
   align-items: center;
 }
 .project-card__btn:hover {
-  background-color: #5E94A6;
+  background-color: #405F68;
   color: #FFF;
-  border-color: #5E94A6;
+  border-color: #405F68;
 }
 .project-card__btn:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   color: #FFF;
-  border-color: #5E94A6;
+  border-color: #405F68;
   outline: 3px solid #283B42;
   outline-offset: 2px;
 }
 .project-card__btn:active {
-  background-color: #5E94A6;
-  border-color: #5E94A6;
+  background-color: #405F68;
+  border-color: #405F68;
   color: #FFF;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -127,15 +126,16 @@
   min-width: 2.75rem;
 }
 .more-btn:hover {
-  background-color: #5E94A6;
+  background-color: #405F68;
+  color: #FFF;
 }
 .more-btn:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   outline: 3px solid #FFF;
   outline-offset: 2px;
 }
 .more-btn:active {
-  background-color: #5E94A6;
+  background-color: #405F68;
 }
 @media (prefers-reduced-motion: reduce) {
   .more-btn {
@@ -400,7 +400,7 @@ a {
 }
 .bio .intro__title {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   font-family: "Bebas Neue", sans-serif;
 }
