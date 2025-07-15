@@ -74,6 +74,53 @@
     }
 }
 
+@media (min-width: 600px) and (max-width: 900px) {
+    .btn-container__contact-button,
+    .btn-container__resume-button,
+    .project-card__btn {
+        width: 100%;
+        font-size: 0.9rem;
+        @include flex-center;
+    }
+
+       .bio {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+
+        .headshot {
+            &__img {
+                width: 50vw;
+                height: auto;
+            }
+        }
+
+        .intro {
+            width: 50vw;
+            height: auto;
+            padding: $medium-padding;
+            gap: 0;
+
+            .intro__title {
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            
+        }
+
+        .btn-container {
+            margin-top: 1rem;
+            
+        }
+    }
+
+    .latest-projects {
+        height: auto;
+
+    }
+}
+
 @media (max-width: 950px) and (orientation: landscape) {
     .btn-container__contact-button,
     .btn-container__resume-button,
