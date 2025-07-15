@@ -39,17 +39,17 @@
   background-color: #405f6a;
 }
 .btn-container__contact-button:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   outline: 3px solid #FFF;
   outline-offset: 2px;
 }
 .btn-container__contact-button:active {
-  background-color: #5E94A6;
+  background-color: #405F68;
 }
 
 .btn-container__resume-button {
-  background-color: #5E94A6;
-  color: #FFF;
+  background-color: #FFF;
+  color: #283B42;
   border: 2px solid transparent;
   text-align: center;
   display: inline-block;
@@ -62,64 +62,15 @@
   border-color: #405f6a;
 }
 .btn-container__resume-button:focus-visible {
-  background-color: #5E94A6;
+  background-color: #405F68;
   color: #FFF;
-  border-color: #5E94A6;
+  border-color: #405F68;
   outline: 3px solid #FFF;
   outline-offset: 2px;
 }
 .btn-container__resume-button:active {
-  background-color: #5E94A6;
-  border-color: #5E94A6;
-  color: #FFF;
-}
-
-.project-card__btn {
-  background-color: #283B42;
-  color: #FFF;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  min-height: 2.75rem;
-  min-width: 2.75rem;
-}
-.project-card__btn:hover {
-  background-color: #5E94A6;
-}
-.project-card__btn:focus-visible {
-  background-color: #5E94A6;
-  outline: 3px solid #FFF;
-  outline-offset: 2px;
-}
-.project-card__btn:active {
-  background-color: #5E94A6;
-}
-@media (prefers-reduced-motion: reduce) {
-  .project-card__btn {
-    transition: none;
-  }
-}
-
-.latest-projects .btn {
-  background-color: #FFF;
-  color: #283B42;
-  border: 2px solid #283B42;
-}
-.latest-projects .btn:hover {
-  background-color: #5E94A6;
-  color: #FFF;
-  border-color: #5E94A6;
-}
-.latest-projects .btn:focus-visible {
-  background-color: #5E94A6;
-  color: #FFF;
-  border-color: #5E94A6;
-  outline: 3px solid #283B42;
-  outline-offset: 2px;
-}
-.latest-projects .btn:active {
-  background-color: #5E94A6;
-  border-color: #5E94A6;
+  background-color: #405F68;
+  border-color: #405F68;
   color: #FFF;
 }
 
@@ -136,6 +87,60 @@
   text-align: center;
   transition: background-color 0.3s ease;
   margin-top: auto;
+  line-height: 1.5;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-card__btn:hover {
+  background-color: #405F68;
+  color: #FFF;
+  border-color: #405F68;
+}
+.project-card__btn:focus-visible {
+  background-color: #405F68;
+  color: #FFF;
+  border-color: #405F68;
+  outline: 3px solid #283B42;
+  outline-offset: 2px;
+}
+.project-card__btn:active {
+  background-color: #405F68;
+  border-color: #405F68;
+  color: #FFF;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card__btn {
+    transition: none;
+  }
+}
+
+.more-btn {
+  background-color: #FFF;
+  color: #283B42;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+}
+.more-btn:hover {
+  background-color: #405F68;
+  color: #FFF;
+}
+.more-btn:focus-visible {
+  background-color: #405F68;
+  outline: 3px solid #FFF;
+  outline-offset: 2px;
+}
+.more-btn:active {
+  background-color: #405F68;
+}
+@media (prefers-reduced-motion: reduce) {
+  .more-btn {
+    transition: none;
+  }
 }
 
 html {
@@ -151,6 +156,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 1.5rem;
+  color: #FFF;
+  padding: 0.5rem;
 }
 
 @keyframes shake {
@@ -268,6 +280,20 @@ a {
   height: 27rem;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover, .project-card:focus {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
+  .project-card:hover, .project-card:focus {
+    transform: none;
+    box-shadow: none;
+  }
 }
 .project-card__title {
   font-size: 1.5rem;
@@ -318,7 +344,6 @@ a {
 
 .footer {
   height: 3.75rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,7 +400,7 @@ a {
 }
 .bio .intro__title {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -395,6 +420,9 @@ a {
   .project-card__btn {
     width: 100%;
     font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .header__nav-menu {
     display: none;
@@ -447,6 +475,15 @@ a {
   }
 }
 @media (max-width: 950px) and (orientation: landscape) {
+  .btn-container__contact-button,
+  .btn-container__resume-button,
+  .project-card__btn {
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .main__welcome-section {
     min-height: calc(80vh - 3.75rem);
     background: #283B42;
@@ -477,11 +514,6 @@ a {
   }
   .bio .btn-container {
     margin-top: 1rem;
-  }
-  .bio .btn-container .btn-container__contact-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .latest-projects {
     height: auto;
