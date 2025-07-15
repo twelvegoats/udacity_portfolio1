@@ -1,5 +1,9 @@
 # Portfolio Homepage Project
 
+## Attributions
+Banner photo from <a href="https://www.pexels.com/photo/black-background-with-text-overlay-screengrab-270404/">Pexels</a>
+
+
 ## Overview
 
 This project is a responsive and accessible portfolio homepage designed to showcase my skills as a Fron End Web Developer. It features an intro banner with a profile image and bio, a section for the latest projects, a navigation header, and a footer. The project emphasizes modern web development practices, including semantic HTML, SASS, and accessibility standards.
