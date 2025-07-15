@@ -46,5 +46,5 @@ Throughout the development of this project, I have gained valuable experience an
 This project has been an excellent opportunity to apply and expand my web development skills. By integrating various technologies and methodologies, I have created a portfolio homepage that is not only visually appealing but also accessible and responsive. I look forward to building upon these skills in future projects.
 
 ### Screenshot
-<img src="../img/udacity_portfolio1.png">
+<img src="./starter/src/img/udacity_portfolio1.png">
 <a href="https://twelvegoats.github.io/udacity_portfolio1/">See on GitHub</a>
