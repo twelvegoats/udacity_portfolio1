@@ -123,7 +123,7 @@
     background-color: $white;
     color: $dark-color;
     text-decoration: none;
-    display: inline-block;
+    @include flex-center;
     text-align: center;
     min-height: 2.75rem;
     min-width: 2.75rem;
