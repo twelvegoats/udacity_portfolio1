@@ -31,10 +31,10 @@
     </label>
     <nav class="header__nav-menu">
       <ul class="nav-menu__list">
+        <li class="nav-menu__item"><a href="#main" class="nav-menu__link">About</a></li>
         <li class="nav-menu__item"><a href="#skills" class="nav-menu__link">Skills</a></li>
         <li class="nav-menu__item"><a href="#latest-projects" class="nav-menu__link">Projects</a></li>
-        <li class="nav-menu__item"><a href="#resume" class="nav-menu__link">Resume</a></li>
-        <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Contact</a></li>
+        <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Contact</a></li>        
       </ul>
     </nav>
   </header>
@@ -57,6 +57,53 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="skills__container">
+          <h2 class="skills__title">My Skills</h2>
+          <div class="skills__grid">
+            <div class="skill">
+              <div class="skill__info">
+                <span class="skill__name">HTML</span>
+                <span class="skill__percentage">90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__progress" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__info">
+                <span class="skill__name">CSS/SCSS</span>
+                <span class="skill__percentage">85%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__progress" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__info">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__percentage">25%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__progress" data-width="25"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__info">
+                <span class="skill__name">Git</span>
+                <span class="skill__percentage">80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section id="latest-projects" class="latest-projects">
@@ -103,53 +150,30 @@
       </div>
       <a href="https://github.com/twelvegoats" target="_blank" class="btn more-btn">See More...</a>
     </section>
-    
-  <section id="skills" class="skills">
-    <div class="skills__container">
-      <h2 class="skills__title">My Skills</h2>
-      <div class="skills__grid">
-        <div class="skill">
-          <div class="skill__info">
-            <span class="skill__name">HTML</span>
-            <span class="skill__percentage">90%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__progress" data-width="90"></div>
-          </div>
-        </div>
 
-        <div class="skill">
-          <div class="skill__info">
-            <span class="skill__name">CSS/SCSS</span>
-            <span class="skill__percentage">85%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__progress" data-width="85"></div>
-          </div>
+    <section id="contact" class="contact">
+      <h2 class="contact__title">Contact Me</h2>
+      <form class="contact__form" action="https://udacity.com" method="POST" aria-label="Contact Form">
+        <div class="contact__field">
+          <label for="name" class="contact__label">Name</label>
+          <input type="text" id="name" name="name" class="contact__input" required aria-required="true" aria-describedby="name-desc">
+          <span id="name-desc" class="contact__desc">Please enter your full name.</span>
         </div>
-
-        <div class="skill">
-          <div class="skill__info">
-            <span class="skill__name">JavaScript</span>
-            <span class="skill__percentage">25%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__progress" data-width="25"></div>
-          </div>
+        <div class="contact__field">
+          <label for="email" class="contact__label">Email</label>
+          <input type="email" id="email" name="email" class="contact__input" required aria-required="true" aria-describedby="email-desc">
+          <span id="email-desc" class="contact__desc">Please enter a valid email address.</span>
         </div>
-
-        <div class="skill">
-          <div class="skill__info">
-            <span class="skill__name">Git</span>
-            <span class="skill__percentage">80%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__progress" data-width="80"></div>
-          </div>
+        <div class="contact__field">
+          <label for="message" class="contact__label">Message</label>
+          <textarea id="message" name="message" class="contact__textarea" rows="5" required aria-required="true" aria-describedby="message-desc"></textarea>
+          <span id="message-desc" class="contact__desc">Enter your message here.</span>
         </div>
-      </div>
-    </div>
+        <button type="submit" class="contact__submit btn">Send Message</button>
+      </form>
 </section>
+    
+  
   </main>
   <footer class="footer">
     <p>&copy; 2025 Sean Wildman.</p>
