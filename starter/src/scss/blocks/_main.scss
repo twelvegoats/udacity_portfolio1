@@ -9,7 +9,7 @@
 }
 
 .main__welcome-section {
-    min-height: calc(60vh - #{$header-height});
+    min-height: calc(80vh - #{$header-height});
     background-image: url('../img/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg');
     background-size: cover;
     background-position: center;
@@ -38,7 +38,7 @@
     .intro {
         background-color: $light-gray;
         height: 40vh;
-        width: 28vw;
+        width: 50vw;
         padding: $medium-padding;
         text-align: center;      
         flex-direction: column;
@@ -55,6 +55,7 @@
         &__desc {
             font-size: 1.1rem;
             margin-bottom: 1rem;
+            width: 25rem;
         }
         .btn-container {
             display: flex;
